@@ -1,0 +1,1 @@
+/m/list.php?tid=[field:id/]

@@ -1,0 +1,51 @@
+<div class="header">
+  <div class="banner">
+    <div class="head">
+      <div class="logo">
+        <ul class="img_list">
+          <li class="image_one"><a href="/"><span class="rollover"></span><img src="/skin/img/logo.png" width="180" height="155" /></a></li>
+        </ul>
+      </div>
+      <div class="dh">
+        <li><a href="/">网站首页</a></li>
+        {dede:channelartlist typeid='11,22,47'}
+        <li><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></li>
+        {/dede:channelartlist} </div>
+    </div>
+    <div class="index-banner">
+      <div class="index_banner_cont">
+        <div class="index_banner_scroll"> {dede:arclist titlelen=80 orderby ='pubdate' row='3' typeid='23'}
+          <div><img src="[field:picname/]" width="1920" height="670" alt="[field:title/]" /></div>
+          {/dede:arclist} </div>
+      </div>
+      <div class="banner_btn">
+        <div class="banner_list"> <span></span> <span></span> <span></span> </div>
+        <div class="banner_span"> {dede:arclist titlelen=80 orderby ='pubdate' row='3' typeid='23'} <a href="javascript:void(0)"><img src="[field:picname/]" width="49" height="42" alt="[field:title/]" /></a> {/dede:arclist} </div>
+      </div>
+      <div class="index-btn browser"> {dede:type typeid='19'} <span class="btn1" onclick="location.href='[field:typeurl/]'">[field:typename/]</span> {/dede:type}
+        {dede:type typeid='1'} <span class="btn2" onclick="location.href='[field:typeurl/]'">[field:typename/]</span> {/dede:type}
+        {dede:type typeid='33'} <span class="btn3" onclick="location.href='[field:typeurl/]'">[field:typename/]</span> {/dede:type}
+        {dede:type typeid='15'} <span class="btn4" onclick="location.href='[field:typeurl/]'">[field:typename/]</span> {/dede:type} </div>
+      <div class="index_menu"> {dede:channelartlist typeid='19,0'}
+        <div class="index_menu_item menuItem1"><img src="{dede:field name='typeimg'/}" width="258" height="112" alt="" />
+          <div class="clearfix">{dede:channel type='son' row='6'} <a href="[field:typeurl/]">[field:typename/]</a> {/dede:channel}</div>
+        </div>
+        {/dede:channelartlist} 
+        {dede:channelartlist typeid='1,0'}
+        <div class="index_menu_item menuItem2"><img src="{dede:field name='typeimg'/}" width="258" height="112" alt="" />
+          <div class="clearfix">{dede:channel type='son' row='6'} <a href="[field:typeurl/]">[field:typename/]</a> {/dede:channel}</div>
+        </div>
+        {/dede:channelartlist}
+        {dede:channelartlist typeid='33,0'}
+        <div class="index_menu_item menuItem3"><img src="{dede:field name='typeimg'/}" width="258" height="112" alt="" />
+          <div class="clearfix">{dede:channel type='son' row='6'} <a href="[field:typeurl/]">[field:typename/]</a> {/dede:channel}</div>
+        </div>
+        {/dede:channelartlist}
+        {dede:channelartlist typeid='15,0'}
+        <div class="index_menu_item menuItem4"><img src="{dede:field name='typeimg'/}" width="258" height="112" alt="" />
+          <div class="clearfix">{dede:channel type='son' row='6'} <a href="[field:typeurl/]">[field:typename/]</a> {/dede:channel}</div>
+        </div>
+        {/dede:channelartlist} </div>
+    </div>
+  </div>
+</div>

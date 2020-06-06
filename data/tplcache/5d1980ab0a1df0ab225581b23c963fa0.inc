@@ -1,0 +1,1 @@
+<a href="javascript:void(0)"><img src="[field:picname/]" width="49" height="42" alt="[field:title/]" /></a>

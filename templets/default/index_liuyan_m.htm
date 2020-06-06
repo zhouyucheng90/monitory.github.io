@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta name="author" content="order by dede58.com" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="/m/skin/css/base.css">
+<link rel="stylesheet" href="/m/skin/css/form.css">
+<link rel="stylesheet" href="/m/skin/css/gnpejq.css">
+<link rel="stylesheet" href="/m/skin/css/marketing.css">
+<link rel="stylesheet" href="/m/skin/css/share.css">
+<style>
+#share-mask .tip {
+	background-color: #1E75C9
+}
+</style>
+</head><body>
+{dede:include filename="header_m.htm"/}
+<div id="body">
+  <section id="form" class="widget widget-form">
+    <section class="content">{dede:field name='typename'/}</section>
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+      <div class="pf-line">
+        <label class="pf-label" for="_0">姓名<span class="pf-tip">(必填)</span></label>
+        <input type="text" class="pf-input" name="name" required>
+      </div>
+      <div class="pf-line">
+        <label class="pf-label" for="_1">电话<span class="pf-tip">(必填)</span></label>
+        <input type="text" class="pf-input" name="tel" required>
+      </div>
+      <div class="pf-line">
+        <label class="pf-label" for="_3">邮箱</label>
+        <input type="text" class="pf-input" name="email">
+      </div>
+      <div class="pf-line">
+        <label class="pf-label" for="_4">内容<span class="pf-tip">(必填)</span></label>
+        <textarea rows="5" class="pf-input" name="content" required></textarea>
+      </div>
+        <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,multitext" />
+        <input type="hidden" name="dede_fieldshash" value="6af2a5c6a0b7a632336279b73c7cee26" />
+      <button type="submit" class="pf-button" style="color: rgb(255, 255, 255); background-color: rgb(0, 81, 187);">提交</button>
+    </form>
+  </section>
+  <script src="/m/skin/js/form-verify.js"></script></div>
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>

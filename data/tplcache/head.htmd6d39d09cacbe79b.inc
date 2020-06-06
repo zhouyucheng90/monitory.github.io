@@ -1,0 +1,42 @@
+<?php
+$z[0]=Array("channelartlist","\r\n        <li><a href=\"{dede:field name='typeurl'/}\">{dede:field name='typename'/}</a></li>\r\n        ",377,539);
+$z[0][4]=array();
+$z[0][4]['typeid']="11,22,47";
+$z[1]=Array("arclist","\r\n          <div><img src=\"[field:picname/]\" width=\"1920\" height=\"670\" alt=\"[field:title/]\" /></div>\r\n          ",673,865);
+$z[1][4]=array();
+$z[1][4]['titlelen']="80";
+$z[1][4]['orderby']="pubdate";
+$z[1][4]['row']="3";
+$z[1][4]['typeid']="23";
+$z[2]=Array("arclist"," <a href=\"javascript:void(0)\"><img src=\"[field:picname/]\" width=\"49\" height=\"42\" alt=\"[field:title/]\" /></a> ",1038,1227);
+$z[2][4]=array();
+$z[2][4]['titlelen']="80";
+$z[2][4]['orderby']="pubdate";
+$z[2][4]['row']="3";
+$z[2][4]['typeid']="23";
+$z[3]=Array("type"," <span class=\"btn1\" onclick=\"location.href='[field:typeurl/]'\">[field:typename/]</span> ",1288,1411);
+$z[3][4]=array();
+$z[3][4]['typeid']="19";
+$z[4]=Array("type"," <span class=\"btn2\" onclick=\"location.href='[field:typeurl/]'\">[field:typename/]</span> ",1421,1543);
+$z[4][4]=array();
+$z[4][4]['typeid']="1";
+$z[5]=Array("type"," <span class=\"btn3\" onclick=\"location.href='[field:typeurl/]'\">[field:typename/]</span> ",1553,1676);
+$z[5][4]=array();
+$z[5][4]['typeid']="33";
+$z[6]=Array("type"," <span class=\"btn4\" onclick=\"location.href='[field:typeurl/]'\">[field:typename/]</span> ",1686,1809);
+$z[6][4]=array();
+$z[6][4]['typeid']="15";
+$z[7]=Array("channelartlist","\r\n        <div class=\"index_menu_item menuItem1\"><img src=\"{dede:field name='typeimg'/}\" width=\"258\" height=\"112\" alt=\"\" />\r\n          <div class=\"clearfix\">{dede:channel type='son' row='6'} <a href=\"[field:typeurl/]\">[field:typename/]</a> {/dede:channel}</div>\r\n        </div>\r\n        ",1849,2193);
+$z[7][4]=array();
+$z[7][4]['typeid']="19,0";
+$z[8]=Array("channelartlist","\r\n        <div class=\"index_menu_item menuItem2\"><img src=\"{dede:field name='typeimg'/}\" width=\"258\" height=\"112\" alt=\"\" />\r\n          <div class=\"clearfix\">{dede:channel type='son' row='6'} <a href=\"[field:typeurl/]\">[field:typename/]</a> {/dede:channel}</div>\r\n        </div>\r\n        ",2204,2547);
+$z[8][4]=array();
+$z[8][4]['typeid']="1,0";
+$z[9]=Array("channelartlist","\r\n        <div class=\"index_menu_item menuItem3\"><img src=\"{dede:field name='typeimg'/}\" width=\"258\" height=\"112\" alt=\"\" />\r\n          <div class=\"clearfix\">{dede:channel type='son' row='6'} <a href=\"[field:typeurl/]\">[field:typename/]</a> {/dede:channel}</div>\r\n        </div>\r\n        ",2557,2901);
+$z[9][4]=array();
+$z[9][4]['typeid']="33,0";
+$z[10]=Array("channelartlist","\r\n        <div class=\"index_menu_item menuItem4\"><img src=\"{dede:field name='typeimg'/}\" width=\"258\" height=\"112\" alt=\"\" />\r\n          <div class=\"clearfix\">{dede:channel type='son' row='6'} <a href=\"[field:typeurl/]\">[field:typename/]</a> {/dede:channel}</div>\r\n        </div>\r\n        ",2911,3255);
+$z[10][4]=array();
+$z[10][4]['typeid']="15,0";
+
+?>

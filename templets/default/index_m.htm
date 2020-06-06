@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta name="author" content="order by dede58.com" />
+<title>{dede:global.cfg_webname/}移动版</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="/m/skin/css/base.css">
+<link rel="stylesheet" href="/m/skin/css/gnpejq.css">
+<link rel="stylesheet" href="/m/skin/css/widget-slider.css">
+<link rel="stylesheet" href="/m/skin/css/marketing.css">
+<link rel="stylesheet" href="/m/skin/css/share.css">
+<style>
+#share-mask .tip {
+	background-color: #1E75C9
+}
+</style>
+</head>
+<body class="specialpage-home">
+{dede:include filename="header_m.htm"/}
+<div id="body">
+  <section class="widget widget-slides widget-slides-dot">
+    <div class="widget-body">
+      <ul class="list">
+      {dede:arclist typeid='25' row='3'}
+        <li class="list-item">
+          <div class="image-container"> <img src="[field:picname/]" alt=""> </div>
+          <div class="title"></div>
+        </li>
+     {/dede:arclist}           
+      </ul>
+    </div>
+  </section>
+  {dede:channelartlist typeid='19,0'}
+  <section class="widget widget-textblock ">
+    <div class="widget-header">
+      <h2>{dede:field name='typename'/}</h2>
+    </div>
+    <div class="widget-body">{dede:sql sql='Select content from dede_arctype where id=19'}[field:content function='cn_substr(html2text(@me),260)'/] {/dede:sql} ...</div>
+    <div class="widget-footer"> <a class="more" href="list.php?tid={dede:field name='id'/}"><i class="icon"></i>更多</a> </div>
+  </section>
+  {/dede:channelartlist} 
+  {dede:channelartlist typeid='1,0'}
+  <section class="widget widget-imagelist ">
+    <div class="widget-header">
+      <h2>{dede:field name='typename'/}</h2>
+    </div>
+    <div class="widget-body">
+      <ul class="list">
+      {dede:arclist titlelen='40' row='8'} 
+        <li class="list-item"> <a href="view.php?aid=[field:id/]">
+          <div class="image-container"> <img src="[field:picname/]" alt="[field:title/]"> </div>
+          <div class="title">[field:title/]</div>
+          </a> </li>
+      {/dede:arclist}    
+      </ul>
+    </div>
+    <div class="widget-footer"> <a class="more" href="list.php?tid={dede:field name='id'/}"><i class="icon"></i>更多</a> </div>
+  </section>
+  {/dede:channelartlist} 
+  {dede:channelartlist typeid='15,0'}
+  <section class="widget widget-textlist ">
+    <div class="widget-header">
+      <h2>{dede:field name='typename'/}</h2>
+    </div>
+    <div class="widget-body">
+      <ul class="list">
+      {dede:arclist titlelen='40' row='4'} 
+        <li class="list-item"><a href="view.php?aid=[field:id/]"><span class="title">[field:title/]</span>
+          <time class="pub-date">[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+          </a></li>
+      {/dede:arclist}    
+      </ul>
+    </div>
+    <div class="widget-footer"> <a class="more" href="list.php?tid={dede:field name='id'/}"><i class="icon"></i>更多</a> </div>
+  </section>
+  {/dede:channelartlist} 
+</div>
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>

@@ -1,0 +1,1 @@
+<li style=" font:12px/40px '宋体'; border-bottom:1px  #CCCCCC dashed; list-style:inside; height:40px"><a href="[field:arcurl/]"> [field:title/]<span class="right">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a></li>

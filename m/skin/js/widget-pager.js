@@ -1,0 +1,3 @@
+/*! QTouch 
+ *  2015-08-22 */
+$(function(){var a=$(".widget-pager"),b=a.data("configs"),c=b["target-list"];a.addClass("ajax"),a.find(".more").click(function(){var b=$(this);return a.addClass("loading"),b.html('<i class="icon"></i>加载中&hellip;'),$.get(b.attr("href")).success(function(d){a.removeClass("loading"),b.html('<i class="icon"></i>查看更多');var e=$(d).find(c).find(".list").children();$(c).find(".list").append(e),$(c).is(".widget-imagelist")&&$(".widget-imagelist").trigger("resize-items");var f=$(d).find(".pager-next");f.length?a.find(".more").attr("href",f.attr("href")):a.hide()}).error(function(){a.removeClass("loading"),b.html('<i class="icon"></i>载入失败，请重试')}),!1})});

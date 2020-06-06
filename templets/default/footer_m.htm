@@ -1,0 +1,19 @@
+<footer id="footer">
+  <div id="copyrights">{dede:global.cfg_webname/}</div>
+</footer>
+<section id="qtouch-link"><a href="/m" target="_blank">{dede:global.cfg_ggtext/}</a></section>
+<script src="/m/skin/js/jquery-2.min.js"></script>
+<script>$(function(){var n=$("#main-menu"),a=n.children();if(a.length>4){n.after('<ul id="nav-menu" class="menu" />'),a.filter(":nth-child(n+5)").appendTo("#nav-menu"),n.append('<li id="nav-menu-toggle" class="menuitem"><a href=""><span class="icon"><\/span><span class="icon"><\/span><span class="icon"><\/span><\/a><\/li>');var e=$("#menu").addClass("has-nav-menu");$("#nav-menu-toggle > a").on("click",function(){return e.toggleClass("show-nav-menu"),!1})}});</script> 
+<script>$(function(){$(window).on("resize",function(){$("#body").css("min-height",$(window).height()-($("footer:visible").outerHeight(!0)||0)-parseInt($("#qtouch-link").outerHeight(!0)||0)-$("#body").offset().top)}).trigger("resize")});</script> 
+<script>$(function(){"fixed"==$("footer").css("position")&&$("#qtouch-link").appendTo("footer")});</script> <script src="/m/skin/js/touchslide.1.1.js"></script> 
+<script src="/m/skin/js/widget-slider.js"></script> 
+<script>$(function(){function i(i){if(t=i.length,!(2>t))for(var h=0;h<Math.floor(t/2);h++){var n=$(i[2*h]),e=n.height(),a=$(i[2*h+1]),f=a.height();if(e!=f){var o=Math.max(e,f);n.height(o),a.height(o)}}}var h=$(".widget-imagelist");h.on("resize-items",function(){var t=$(this).find(".title");i(t);var h=$(this).find("img"),n=h.length;n>1&&(h.each(function(){this.complete?n--:$(this).one("load",function(){n--,0==n&&i(h)})}),0==n&&i(h))}).trigger("resize-items")});</script> 
+<script src="/m/skin/js/marketing.js"></script> <script src="/m/skin/js/share.js"></script>
+<section id="plugin-contact-ring2" class="zh"><a href="/m" onclick="location.href='/m'" id="ring-toggle-button"></a>
+  <ul id="ring-list">
+    <li class="item item-phone"><a href="tel:{dede:global.cfg_tel/}"><i class="icon"></i><span class="title">电话</span></a></li>
+    <li class="item item-sms"><a href="sms:{dede:global.cfg_phone/}"><i class="icon"></i><span class="title">短信</span></a></li>
+    <li class="item item-map"><a href="{dede:type typeid='52'}/m/list.php?tid=[field:id/]{/dede:type}"><i class="icon"></i><span class="title">地图</span></a></li>
+    <li class="item item-flush"><a href="javascript:location.reload();"><i class="icon"></i><span class="title">刷新</span></a></li>
+  </ul>
+</section>

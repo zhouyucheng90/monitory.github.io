@@ -1,0 +1,40 @@
+﻿/* eyoucms.com 易优CMS -- 好用,免费,安全 */
+.widget-pager.ajax>.widget-body, .widget-pager>.widget-footer {
+	display: none
+}
+.widget-pager.ajax>.widget-footer {
+	display: block
+}
+.widget-pager.loading>.widget-footer>.more>.icon {
+	-webkit-animation: pager-spin 2s linear infinite;
+	animation: pager-spin 2s linear infinite
+}
+.widget-pager.loading>.widget-footer>.more>.icon:after, .widget-pager.loading>.widget-footer>.more>.icon:before {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%
+}
+.widget-pager.loading>.widget-footer>.more>.icon:before {
+	left: 2px;
+	top: 2px
+}
+.widget-pager.loading>.widget-footer>.more>.icon:after {
+	left: auto;
+	top: auto;
+	right: 2px;
+	bottom: 2px
+}
+@keyframes pager-spin {
+0% {
+-webkit-transform:rotate(0);
+-ms-transform:rotate(0);
+-o-transform:rotate(0);
+transform:rotate(0)
+}
+100% {
+-webkit-transform:rotate(360deg);
+-ms-transform:rotate(360deg);
+-o-transform:rotate(360deg);
+transform:rotate(360deg)
+}
+}

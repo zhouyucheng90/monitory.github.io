@@ -1,0 +1,97 @@
+﻿/* eyoucms.com 易优CMS -- 好用,免费,安全 */
+.pf-line {
+	display: block;
+	margin-bottom: 10px
+}
+.pf-form-title {
+	font-size: 150%
+}
+.pf-title {
+	font-size: 130%
+}
+.pf-label {
+	display: block;
+	font-size: 120%
+}
+.pf-tip {
+	font-size: 80%
+}
+.pf-label .pf-tip {
+	margin-left: .5em;
+	opacity: .8;
+	font-style: italic
+}
+input[type=text].pf-input, input[type=number].pf-input, input[type=date].pf-input, input[type=email].pf-input, input[type=tel].pf-input, select.pf-input, textarea.pf-input {
+	font-size: 110%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height: 36px;
+	line-height: 20px;
+	background: #fff;
+	width: 100%;
+	padding: 3px 5px;
+	box-shadow: 0 0 3px #f0f0f0;
+	border: 1px solid #999;
+	-webkit-transition: box-shadow .5s, border-color .5s;
+	transition: box-shadow .5s, border-color .5s
+}
+textarea.pf-input {
+	height: auto;
+	line-height: 1.1
+}
+input[type=text].pf-input:focus, input[type=number].pf-input:focus, input[type=date].pf-input:focus, input[type=email].pf-input:focus, input[type=tel].pf-input:focus, select.pf-input:focus, textarea.pf-input:focus {
+	border-color: #84b3ff;
+	box-shadow: 0 0 5px 1px #84b3ff;
+	outline: 0
+}
+.pf-error .pf-input {
+	border-color: #ff3434!important
+}
+.pf-input-inline {
+	min-width: 60px;
+	margin-right: 10px
+}
+label.pf-line {
+	position: relative;
+	padding-left: 1.6em
+}
+label.pf-line input[type=radio], label.pf-line input[type=checkbox] {
+	position: absolute;
+	left: 0;
+	top: 0
+}
+.pf-button {
+	min-width: 50px;
+	min-height: 30px;
+	padding: 5px 10px
+}
+.pf-vcode-line {
+	display: -webkit-flex;
+	display: flex
+}
+.pf-vcode-line .pf-label, .pf-vcode-line .pf-vcode {
+	margin-right: .5em;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0
+}
+.pf-vcode-line .pf-input {
+	margin-right: .5em;
+	width: 5em!important;
+	text-align: center
+}
+#form .content {
+	width: 100%;
+	text-align: center;
+	font-size: 25px
+}
+#form {
+	padding: 0 10px
+}
+#form .pf-button {
+	width: 98%;
+	margin: 0 auto;
+	display: block;
+	border: none;
+	border-radius: 3px;
+	height: 38px
+}

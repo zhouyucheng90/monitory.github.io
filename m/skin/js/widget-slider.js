@@ -1,0 +1,3 @@
+/*! QTouch 
+ *  2015-06-26 */
+$(function(){var a=0;$("#body > .widget-slides").each(function(){var b="widget-slides-"+a;$(this).attr("id",b);for(var c=$('<div class="widget-footer"></div>').appendTo(this),d=$('<ul class="nav-list"></ul>').appendTo(c),e=1;e<=$(".widget-body .list-item",this).length;e++)d.append('<li class="nav-list-item"><i class="icon"></i></li>');TouchSlide({slideCell:b,effect:"leftLoop",mainCell:".list",titCell:".nav-list-item",autoPlay:!0})})});

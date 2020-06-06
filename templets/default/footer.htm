@@ -1,0 +1,79 @@
+<div class="footer">
+  <div class="foot">
+    <div class="linktu"></div>
+    <div class="clear"></div>
+    <div class="ewm"></div>
+    <div class="ftel">
+      <p> 公司 : {dede:global.cfg_webname/}<br>
+        手机 : {dede:global.cfg_phone/}<br>
+        传真 : {dede:global.cfg_fax/}<br>
+        邮箱 : {dede:global.cfg_email/}<br>
+        地址：{dede:global.cfg_adr/} </p>
+    </div>
+    <div class="links">
+      <p> {dede:flink row='6'/} <a href='http://www.tv5698.com' target='_blank'>液晶电视哪个牌子好</a> </br></p>
+    </div>
+    <div class="ftell">
+      <p> {dede:global.cfg_tel/} </p>
+      <div class="clear"></div>
+      <div class="bdsharebuttonbox" style=" margin-left:63px;"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+      <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script> 
+    </div>
+    <div class="clear"></div>
+    <div class="admin">{dede:global.cfg_powerby/}&nbsp;&nbsp;{dede:global.cfg_beian/} <br>
+    </div>
+  </div>
+  <div class="main-im">
+    <div id="open_im" class="open-im">&nbsp;</div>
+    <div class="im_main" id="im_main">
+      <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+      <a href="http://wpa.qq.com/msgrd?v=3&site={dede:global.cfg_webname/}&menu=yes&uin={dede:global.cfg_kfqq/}" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+      <div class="qq-container"></div>
+      <div class="qq-hover-c"><img class="img-qq" src="/skin/img/qq.png"></div>
+      <span> QQ在线咨询</span> </a>
+      <div class="im-tel">
+        <div>咨询电话：</div>
+        <div class="tel-num">{dede:global.cfg_tel/}</div>
+        <div>传真号码：</div>
+        <div class="tel-num">{dede:global.cfg_fax/}</div>
+      </div>
+      <div class="im-footer" style="position:relative">
+        <div class="weixing-container">
+          <div class="weixing-show">
+            <div class="weixing-txt">微信扫一扫<br>
+              关注我们</div>
+            <img class="weixing-ma" src="/skin/img/weixin.png">
+            <div class="weixing-sanjiao"></div>
+            <div class="weixing-sanjiao-big"></div>
+          </div>
+        </div>
+        <div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+        <div style="clear:both"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+$(function(){
+	$('#close_im').bind('click',function(){
+		$('#main-im').css("height","0");
+		$('#im_main').hide();
+		$('#open_im').show();
+	});
+	$('#open_im').bind('click',function(e){
+		$('#main-im').css("height","272");
+		$('#im_main').show();
+		$(this).hide();
+	});
+	$('.go-top').bind('click',function(){
+		$(window).scrollTop(0);
+	});
+	$(".weixing-container").bind('mouseenter',function(){
+		$('.weixing-show').show();
+	})
+	$(".weixing-container").bind('mouseleave',function(){        
+		$('.weixing-show').hide();
+	});
+});
+</script> 
+</div>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta name="author" content="order by dede58.com" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="/m/skin/css/base.css">
+<link rel="stylesheet" href="/m/skin/css/gnpejq.css">
+<link rel="stylesheet" href="/m/skin/css/widget-pager.css">
+<link rel="stylesheet" href="/m/skin/css/marketing.css">
+<link rel="stylesheet" href="/m/skin/css/share.css">
+<style>
+#share-mask .tip {
+	background-color: #1E75C9
+}
+</style>
+</head>
+<body>
+{dede:include filename="header_m.htm"/}
+<div id="body">
+  <section id="main-list" class="widget widget-textlist ">
+    <div class="widget-header">
+      <h2>{dede:field name='typename'/}</h2>
+    </div>
+    <div class="widget-body">
+      <ul class="list">
+      {dede:list pagesize ='8' }   
+        <li class="list-item"><a href="view.php?aid=[field:id/]"><span class="title">[field:title/]</span>
+          <time class="pub-date">[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+          </a></li>
+       {/dede:list}  
+      </ul>
+    </div>
+    <div class="widget-footer"> </div>
+  </section>
+  <section class="widget widget-pager " data-configs="{&quot;target-list&quot;:&quot;#main-list&quot;}">
+    <div class='pagingNav'>
+    <p></p>
+    <div class="uls fr">{dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}</div>
+  </div>
+  </section>
+</div>
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>

@@ -1,0 +1,1 @@
+<span class="btn2" onclick="location.href='[field:typeurl/]'">[field:typename/]</span>

@@ -1,0 +1,1 @@
+<div><img src="[field:picname/]" width="1920" height="670" alt="[field:title/]" /></div>

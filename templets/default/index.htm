@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta name="author" content="order by dede58.com" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="/skin/css/global.css">
+<link href="/skin/css/index.css" type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico" />
+<style>
+#Index {
+}
+</style>
+<script type="text/javascript" src="/skin/js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/banner.js"></script>
+<script type="text/javascript" src="/skin/js/gd.js"></script>
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script type="text/javascript">        	
+$(document).ready(function(){
+    $(".rollover").css({'opacity':'0'});
+
+	$('.img_list a').hover(
+		function() {
+			$(this).find('.rollover').stop().fadeTo(500, 1);
+		},
+		function() {
+			$(this).find('.rollover').stop().fadeTo(500, 0);
+		}
+	)
+
+});		
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="clear"></div>
+<div class="main">
+  <div class="maint"> {dede:channelartlist typeid='19,0'}
+    <div class="about"><img style="float:left; margin-right:31px;" src="/skin/img/about.jpg">
+      <div class="bt"><img src="/skin/img/aboutbt.png"><span>{dede:field name='typename'/}</span>
+        <p>{dede:field name='typenameen'/}</p>
+      </div>
+      <p class="about_p">&nbsp;&nbsp;&nbsp;&nbsp;{dede:sql sql='Select content from dede_arctype where id=19'}[field:content function='cn_substr(html2text(@me),460)'/] {/dede:sql} ...【<font color="#00afdc" style="font-weight:bold"><a href="{dede:field name='typeurl'/}">查看更多</a></font>】</p>
+    </div>
+    {/dede:channelartlist}
+    <div class="ksdh"> {dede:type typeid='15'}
+      <li class="knews"> <a href="[field:typeurl/]">
+        <p>[field:typename/]</p>
+        <span>[field:typenameen/]</span> </a>
+        <dd><a href="[field:typeurl/]"><img src="/skin/img/knewsh.png" />
+          <p>[field:typename/]</p>
+          </a> </dd>
+      </li>
+      {/dede:type}
+      {dede:type typeid='22'}
+      <li class="kcontact"> <a href="[field:typeurl/]">
+        <p>[field:typename/]</p>
+        <span>[field:typenameen/]</span> </a>
+        <dd><a href="[field:typeurl/]"><img src="/skin/img/kcontacth.png" />
+          <p>[field:typename/]</p>
+          </a> </dd>
+      </li>
+      {/dede:type}
+      {dede:type typeid='47'}
+      <li class="korder"> <a href="[field:typeurl/]">
+        <p>[field:typename/]</p>
+        <span>[field:typenameen/]</span> </a>
+        <dd><a href="[field:typeurl/]"><img src="/skin/img/korderh.png" />
+          <p>[field:typename/]</p>
+          </a> </dd>
+      </li>
+      {/dede:type} </div>
+    <div class="clear"></div>
+    <div class="news"> {dede:arclist titlelen=80 orderby ='pubdate' typeid='15' row='3'}
+      <li><a href="[field:arcurl/]"> [field:title/] </a><span class="right">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+      {/dede:arclist} </div>
+  </div>
+  <div class="clear">此处显示  class "clear" 的内容</div>
+  {dede:channelartlist typeid='1,0'}
+  <div class="pro">
+    <div class="pron">
+      <div class="bt"><img src="/skin/img/probt.png"><span>{dede:field name='typename'/}</span>
+        <p>{dede:field name='typenameen'/}</p>
+      </div>
+      <div class="clear"></div>
+      <div class="lanrenzhijia">
+        <div class="tab"> <a href="javascript:;" class="on">1</a> <a href="javascript:;">2</a> </div>
+        <div class="clear">此处显示  class "clear" 的内容</div>
+        <div class="content">
+          <ul>
+            <li>
+              <dl>
+                {dede:arclist titlelen=80 orderby ='pubdate' limit='0,8'}
+                <dd><a href="[field:arcurl/]"><img src="[field:picname/]" />
+                  <p>[field:title/]</p>
+                  <span></span> </a> </dd>
+                {/dede:arclist}
+              </dl>
+            </li>
+            <li>
+              <dl>
+                {dede:arclist titlelen=80 orderby ='pubdate' limit='8,8'}
+                <dd><a href="[field:arcurl/]"><img src="[field:picname/]" />
+                  <p>[field:title/]</p>
+                  <span></span> </a> </dd>
+                {/dede:arclist}
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <script>
+$(function(){
+	$('.lanrenzhijia .content ul').width(1200*$('.lanrenzhijia .content li').length+'px');
+	$(".lanrenzhijia .tab a").mouseover(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		var index = $(this).index();
+		number = index;
+		var distance = -1200*index;
+		$('.lanrenzhijia .content ul').stop().animate({
+			left:distance
+		});
+	});
+	
+	var auto = 0;  //等于1则自动切换，其他任意数字则不自动切换
+	if(auto ==1){
+		var number = 0;
+		var maxNumber = $('.lanrenzhijia .tab a').length;
+		function autotab(){
+			number++;
+			number == maxNumber? number = 0 : number;
+			$('.lanrenzhijia .tab a:eq('+number+')').addClass('on').siblings().removeClass('on');
+			var distance = -1200*number;
+			$('.lanrenzhijia .content ul').stop().animate({
+				left:distance
+			});
+		}
+		var tabChange = setInterval(autotab,3000);
+		//鼠标悬停暂停切换
+		$('.lanrenzhijia').mouseover(function(){
+			clearInterval(tabChange);
+		});
+		$('.lanrenzhijia').mouseout(function(){
+			tabChange = setInterval(autotab,3000);
+		});
+	  }  
+});
+</script> 
+      </div>
+    </div>
+  </div>
+  {/dede:channelartlist}
+  <div class="clear"></div>
+  {dede:channelartlist typeid='33,0'}
+  <div class="gcal">
+    <div class="btn">
+      <div class="bt" style="width:1200px;"><img src="/skin/img/gcbt.png"><span style="color:#FFFFFF">{dede:field name='typename'/}</span>
+        <p style="color:#63a3ed;">{dede:field name='typenameen'/}</p>
+        <a href="{dede:field name='typeurl'/}"><img src="/skin/img/more.png" border="0" style="float:right"></a></div>
+      <div class="clear"></div>
+    </div>
+    <DIV class=blk_18> <A onmouseup=ISL_StopUp_1() class=LeftBotton onmousedown=ISL_GoUp_1() onmouseout=ISL_StopUp_1() href="javascript:void(0);" target=_self></A>
+      <DIV class=pcont id=ISL_Cont_1>
+        <DIV class=ScrCont>
+          <DIV id=List1_1> {dede:arclist titlelen=80 orderby ='pubdate'} <a class=pl href="[field:arcurl/]">
+            <div><img src="[field:picname/]" alt="[field:title/]" /></div>
+            <p>[field:title/]<font style="font:14px/1 Arial, Helvetica, sans-serif; color:#67a5ed; float:right; margin-right:10px;">[field:pubdate function="MyDate('Y-m-d',@me)"/]</font></p>
+            <span></span></a> {/dede:arclist} </DIV>
+          <DIV id=List2_1></DIV>
+        </DIV>
+      </DIV>
+      <A onmouseup=ISL_StopDown_1() class=RightBotton onmousedown=ISL_GoDown_1() onmouseout=ISL_StopDown_1() href="javascript:void(0);" target=_self></A></DIV>
+    <SCRIPT type=text/javascript>
+                picrun_ini()
+                </SCRIPT> 
+  </div>
+  {/dede:channelartlist} </div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
